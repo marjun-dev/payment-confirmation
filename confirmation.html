@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Confirmation page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+  <div class="min-h-screen flex items-center justify-center">
+    <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-4xl">
+      <!-- Confirmation Header -->
+      <div class="flex items-center mb-6">
+        <div class="text-blue-400 text-4xl mr-2">️✅</div>
+        <div>
+            <h2 class="text-gray-700">Your order is confirmed</h2>
+          <h2 class="text-2xl font-bold">Thank you, <span id="customerName">TEST</span>!</h2>
+          <p class="text-gray-600 text-sm">Confirmation #<span id="confirmationId">QVL5HADD5</span></p>
+          <div class="border-t pt-5 mt-4"></div>
+        </div>
+      </div>
+
+      <!-- Order Details and Summary -->
+      <div class="flex flex-col gap-4 lg:gap-1 lg:flex-row justify-between">
+        <!-- Left: Order Details -->
+        <div class="lg:w-1/2 pr-8">
+          <div class="mb-4">
+            <p class="font-bold text-gray-700">Your order is confirmed</p>
+            <p class="text-gray-600">You'll receive a confirmation email shortly</p>
+            <label class="inline-flex items-center mt-4">
+              <input type="checkbox" class="form-checkbox text-green-900">
+              <span class="ml-2">Ping me for offers and discounts</span>
+            </label>
+          </div>
+
+          <div class="border-t pt-4 mt-4">
+            <h3 class="text-lg font-bold mb-2">Order details</h3>
+            <div class="text-gray-700 mb-2">
+              <p class="font-bold">Contact information</p>
+              <p id="customerEmail">arjun@marmeto.com</p>
+            </div>
+            <div class="text-gray-700 mb-2">
+              <p class="font-bold">Shipping address</p>
+              <p id="shippingAddress">TEST TEST<br>kasaragod, 671124<br>kerala kl, India<br>7560833385</p>
+            </div>
+            <div class="text-gray-700 mb-2">
+              <p class="font-bold">Shipping method</p>
+              <p>Fast</p>
+            </div>
+            <div class="text-gray-700">
+              <p class="font-bold">Payment method</p>
+              <p id="paymentMethod">Card - $<span id="grandTotalSummary">1,062.05</span></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Order Summary -->
+        <div class="lg:w-1/2">
+          <div class="bg-white-100 p-2 rounded-lg">
+            <div class="flex flex-col justify-between items-center mb-4" id="product-list">
+              <!-- product will added here -->
+            </div>
+
+            <div class="border-t pt-4 mt-4">
+              <div class="flex justify-between text-gray-700 mb-2">
+                <span>Subtotal</span>
+                <span id="sub_total">₹900.00</span>
+              </div>
+              <div class="flex justify-between text-gray-700 mb-2">
+                <span>Shipping</span>
+                <span id="shipping_charge">FREE</span>
+              </div>
+              <div class="flex justify-between text-gray-700 mb-2">
+                <span>Estimated taxes</span>
+                <span id="taxes">₹162.05</span>
+              </div>
+              <div class="flex justify-between text-gray-700 mb-2">
+                <span>Discount</span>
+                <span id="discount">₹162.05</span>
+              </div>
+              <div class="border-t pt-5 mt-4"></div>
+              <div class="flex justify-between text-lg font-bold">
+                <span>Total</span>
+                <span id="grand_total">₹1,062.05</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6 text-center">
+            <a href="index.html" class="bg-green-700 text-white py-3 px-24 rounded-lg">Continue shopping</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="confirmation.js"></script>
+</body>
+
+</html>
